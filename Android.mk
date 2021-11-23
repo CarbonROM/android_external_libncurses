@@ -40,6 +40,7 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libncurses
+LOCAL_PRODUCT_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -57,7 +58,7 @@ TERMINFO_FILES := \
 	E/Eterm-color
 
 TERMINFO_SOURCE := $(LOCAL_PATH)/lib/terminfo
-TERMINFO_TARGET := $(TARGET_OUT_ETC)/terminfo
+TERMINFO_TARGET := $(TARGET_OUT_PRODUCT_ETC)/terminfo
 $(TERMINFO_TARGET): $(ACP)
 	@echo "copy terminfo to /etc/"
 	@mkdir -p $@
