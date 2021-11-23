@@ -40,6 +40,7 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libncurses
+LOCAL_SYSTEM_EXT_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
